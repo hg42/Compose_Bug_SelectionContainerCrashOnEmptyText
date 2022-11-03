@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun SelectableText() {
     val text = """
+            |
             |Line
             |Line start selecting here and swipe over the empty lines 
             |Line or select a word and extend it over the empty lines 
