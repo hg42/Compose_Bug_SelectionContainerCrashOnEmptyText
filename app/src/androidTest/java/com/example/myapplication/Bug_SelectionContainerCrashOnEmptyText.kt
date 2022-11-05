@@ -24,7 +24,7 @@ import org.junit.Rule
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class CrashTest {
+class Bug_SelectionContainerCrashOnEmptyText {
 
 
     val duration = 3000L
@@ -97,7 +97,7 @@ class CrashTest {
             val real = System.currentTimeMillis() - startReal
             Log.d("..........", "virt: $virt real: $real")
             if (virt > real)
-                Thread.sleep(1)
+                Thread.sleep(virt-real)
             else
                 clock.advanceTimeByFrame()
             if ((virt > duration) and (real > duration))
